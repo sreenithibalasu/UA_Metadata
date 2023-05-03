@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http://575airlineReservations.org/v1/"
+    xmlns="http://575airlineReservation.org/v1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/">
+    
+    <xs:import foaf:namespace="http://xmlns.com/foaf/0.1/" foaf:schemaLocation="index.rdf"/>   
+    <xs:element name="airline_reservation_metadata">
+
+        <xs:annotation>
+            <xs:documentation>
+                Categories: Passenger Name, Reservation ID, Flight Number, 
+                Departure and Arrival Information, Layover Information, Trip Type (one-way or round-trip),
+                Rewards/Loyalty Information, Trip Information, Lounge Information,
+                Delays and Cancelations, Upgrade Information
+            </xs:documentation>
+        </xs:annotation>
+        
+        <xs:complexType>
+            <xs:sequence>
+                
+                <xs:element name="Passenger_Name" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="Reservation_ID" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="Flight_Number" minOccurs="1" maxOccurs="unbounded"/>
+              
+                
+                <xs:element name="Departure_Information" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Departure_Airport_Name" minOccurs="1" maxOccurs="unbounded" type="xs:string"/>
+                            <xs:element name="Departure_Airport_Code" minOccurs="1" maxOccurs="unbounded" type="xs:string"/>
+                            <xs:element name="Departure_DateTime" minOccurs="1" maxOccurs="unbounded" type="xs:dateTime"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="Arrival_Information" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Arrival_Airport_Name" minOccurs="1" maxOccurs="unbounded" type="xs:string"/>
+                            <xs:element name="Arrival_Airport_Code" minOccurs="1" maxOccurs="unbounded" type="xs:string"/>
+                            <xs:element name="Arrival_DateTime" minOccurs="1" maxOccurs="unbounded" type="xs:dateTime"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="Layover_Information" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Layover_Airport" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="Layover_Airport_Code" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="Layover_Time" minOccurs="0" maxOccurs="unbounded" type="xs:time"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                
+                <xs:element name="Flight_Duration" minOccurs="1" maxOccurs="unbounded" type="xs:double"/>
+                
+                <xs:element name="Trip_Type" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:attribute name="Chosen_Trip_Type">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="One-Way"/>
+                                    <xs:enumeration value="Round Trip"></xs:enumeration>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="Booked_Class" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="Chosen_Class">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Economy"/>
+                                    <xs:enumeration value="Premium Economy"/>
+                                    <xs:enumeration value="Business"/>
+                                    <xs:enumeration value="First"></xs:enumeration>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="Rewards_Information" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Rewards_Program" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:attribute name="Chosen_Rewards_Program">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="United MileagePlus"/>
+                                                <xs:enumeration value="Hilton Rewards Club"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            
+                            <xs:element name="Rewards_Program_ID" maxOccurs="1" minOccurs="0" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                
+                <xs:element name="Trip_Information">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Number_of_Checked_Bags" minOccurs="0" maxOccurs="1" type="xs:integer"/>
+                            <xs:element name="Trip_Cost" maxOccurs="1" minOccurs="1" type="xs:double"/>
+                            <xs:element name="Trip_Currency" maxOccurs="1" minOccurs="1">
+                                <xs:complexType>
+                                    <xs:attribute name="Currency">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="USD"/>
+                                                <xs:enumeration value="EUR"/>
+                                                <xs:enumeration value="GBP"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="Meal_Type" minOccurs="0" maxOccurs="3">
+                    <xs:complexType>
+                        <xs:attribute name="meals">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Steak"/>
+                                    <xs:enumeration value="Fish"/>
+                                    <xs:enumeration value="Tofu"/>
+                                    <xs:enumeration value="Curry"/>
+                                    <xs:enumeration value="Hamburger"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="Delays" minOccurs="1" maxOccurs="1" >
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Flight_Delay" minOccurs="1" maxOccurs="1" type="xs:boolean"/>
+                            <xs:element name="Reason_For_Delay" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="Cancelations" minOccurs="1" maxOccurs="1" >
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Flight_Cancelation" minOccurs="0" maxOccurs="1" type="xs:boolean"/>
+                            <xs:element name="Reason_For-Cancelation" minOccurs="0" maxOccurs="1"/>
+                         
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="Lounge_Information" minOccurs="1" maxOccurs="1" >
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Lounge_Access" minOccurs="1" maxOccurs="1" type="xs:boolean"/>
+                            <xs:element name="Lounge_Access_Fee" minOccurs="0" maxOccurs="1" type="xs:double"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="Upgrades_Information" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Upgrade_Waitlist_Position" minOccurs="0" maxOccurs="unbounded" type="xs:integer"/>
+                            
+                            <xs:element name="Seat_Upgrade" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="Original_Seat_Number">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string"/>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                    <xs:attribute name="Upgraded_Seat_Number">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string"/>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                    <xs:attribute name="Upgraded_Class">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string"></xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+               
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
