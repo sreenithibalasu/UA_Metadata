@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<airline_reservation_metadata xmlns="http://575airlineReservations.org/v1/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://575airlineReservations.org/v1/ file:/Users/sreenithibalasubramanian/Downloads/united_airlines_reservation.xsd">
+    <Passenger_Name>Sreenithi Balasubramanian</Passenger_Name>
+    <Reservation_ID>AB1212</Reservation_ID>
+    <Flight_Number>UA345</Flight_Number>
+    <Departure_Information>
+        <Departure_Airport_Name>San Francisco International Airport</Departure_Airport_Name>
+        <Departure_Airport_Code>SFO</Departure_Airport_Code>
+        <Departure_DateTime>2022-12-09T09:00:00</Departure_DateTime>
+    </Departure_Information>
+    <Arrival_Information>
+        <Arrival_Airport_Name>Seattle-Tacoma International Airport</Arrival_Airport_Name>
+        <Arrival_Airport_Code>SEA</Arrival_Airport_Code>
+        <Arrival_DateTime>2022-12-09T11:30:00</Arrival_DateTime>
+    </Arrival_Information>
+    <Layover_Information>
+        <Layover_Airport>Portland International Airport</Layover_Airport>
+        <Layover_Airport_Code>PDX</Layover_Airport_Code>
+        <Layover_Time>01:00:00</Layover_Time>
+    </Layover_Information>
+    <Flight_Duration>3.5</Flight_Duration>
+    <Trip_Type Chosen_Trip_Type="One-Way"/>
+    <Booked_Class Chosen_Class="Business"/>
+    <Rewards_Information>
+        <Rewards_Program Chosen_Rewards_Program="Hilton Rewards Club"/>
+        <Rewards_Program_ID>HIL98873689041</Rewards_Program_ID>
+    </Rewards_Information>
+    <Trip_Information>
+        <Number_of_Checked_Bags>0</Number_of_Checked_Bags>
+        <Trip_Cost>450</Trip_Cost>
+        <Trip_Currency Currency="USD"/>
+    </Trip_Information>
+    <Meal_Type meals="Tofu"/>
+    <Delays>
+        <Flight_Delay>0</Flight_Delay>
+    </Delays>
+    <Cancelations>
+        <Flight_Cancelation>0</Flight_Cancelation>
+    </Cancelations>
+    <Lounge_Information>
+        <Lounge_Access>1</Lounge_Access>
+        <Lounge_Access_Fee>50</Lounge_Access_Fee>
+    </Lounge_Information>
+    <Upgrades_Information>
+        <Upgrade_Waitlist_Position>1</Upgrade_Waitlist_Position>
+        <Seat_Upgrade Original_Seat_Number="11A" Upgraded_Seat_Number="1A" Upgraded_Class="First"/>
+    </Upgrades_Information>
+</airline_reservation_metadata>

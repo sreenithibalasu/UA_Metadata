@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<airline_reservation_metadata xmlns="http://575airlineReservations.org/v1/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://575airlineReservations.org/v1/ file:/Users/sreenithibalasubramanian/Downloads/united_airlines_reservation.xsd">
+    <Passenger_Name>Cherry O'Houlihan</Passenger_Name>
+    <Reservation_ID>Z7C2BD</Reservation_ID>
+    <Flight_Number>M2 4583</Flight_Number>
+    <Departure_Information>
+        <Departure_Airport_Name>San Francisco Int'l Airport</Departure_Airport_Name>
+        <Departure_Airport_Code>SFO</Departure_Airport_Code>
+        <Departure_DateTime>2023-04-11T10:00:00</Departure_DateTime>
+    </Departure_Information>
+    <Arrival_Information>
+        <Arrival_Airport_Name>Cozumel Int'l Airport</Arrival_Airport_Name>
+        <Arrival_Airport_Code>CZM</Arrival_Airport_Code>
+        <Arrival_DateTime>2023-04-12T19:00:00</Arrival_DateTime>
+    </Arrival_Information>
+    <Layover_Information>
+        <Layover_Airport>Dallas/Fort Worth Int'l Airport</Layover_Airport>
+        <Layover_Airport_Code>DFW</Layover_Airport_Code>
+        <Layover_Time>13:30:00</Layover_Time>
+    </Layover_Information>
+    <Flight_Duration>9</Flight_Duration>
+    <Trip_Type Chosen_Trip_Type="Round Trip"/>
+    <Booked_Class Chosen_Class="First"/>
+    <Rewards_Information>
+        <Rewards_Program Chosen_Rewards_Program="Hilton Rewards Club"/>
+        <Rewards_Program_ID>UA-XXX367</Rewards_Program_ID>
+    </Rewards_Information>
+    <Trip_Information>
+        <Number_of_Checked_Bags>5</Number_of_Checked_Bags>
+        <Trip_Cost>465</Trip_Cost>
+        <Trip_Currency Currency="USD"/>
+    </Trip_Information>
+    <Delays>
+        <Flight_Delay>true</Flight_Delay>
+        <Reason_For_Delay>Weather</Reason_For_Delay>
+    </Delays>
+    <Cancelations>
+        <Flight_Cancelation>true</Flight_Cancelation>
+        <Reason_For-Cancelation>Weather</Reason_For-Cancelation>
+    </Cancelations>
+    <Lounge_Information>
+        <Lounge_Access>false</Lounge_Access>
+    </Lounge_Information>
+</airline_reservation_metadata>

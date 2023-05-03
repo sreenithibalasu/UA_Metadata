@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<airline_reservation_metadata xmlns="http://575airlineReservations.org/v1/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://575airlineReservations.org/v1/ file:/Users/sreenithibalasubramanian/Downloads/united_airlines_reservation.xsd">
+    <Passenger_Name>Sreenithi Balasubramanian</Passenger_Name>
+    <Reservation_ID>D1P9P9</Reservation_ID>
+    <Flight_Number>UA255</Flight_Number>
+    <Departure_Information>
+        <Departure_Airport_Name>Chicago O'Hare International Airport</Departure_Airport_Name>
+        <Departure_Airport_Code>ORD</Departure_Airport_Code>
+        <Departure_DateTime>2022-12-09T14:22:00</Departure_DateTime>
+    </Departure_Information>
+    <Arrival_Information>
+        <Arrival_Airport_Name>Los Angeles International Airport</Arrival_Airport_Name>
+        <Arrival_Airport_Code>LAX</Arrival_Airport_Code>
+        <Arrival_DateTime>2022-12-09T16:55:00</Arrival_DateTime>
+    </Arrival_Information>
+    <Flight_Duration>4.5</Flight_Duration>
+    <Trip_Type Chosen_Trip_Type="Round Trip"/>
+    <Booked_Class Chosen_Class="Premium Economy"/>
+    <Rewards_Information>
+        <Rewards_Program Chosen_Rewards_Program="United MileagePlus"/>
+        <Rewards_Program_ID>UA117777175</Rewards_Program_ID>
+    </Rewards_Information>
+    <Trip_Information>
+        <Number_of_Checked_Bags>1</Number_of_Checked_Bags>
+        <Trip_Cost>182</Trip_Cost>
+        <Trip_Currency Currency="USD"/>
+    </Trip_Information>
+    <Delays>
+        <Flight_Delay>0</Flight_Delay>
+    </Delays>
+    <Cancelations>
+        <Flight_Cancelation>0</Flight_Cancelation>
+    </Cancelations>
+    <Lounge_Information>
+        <Lounge_Access>1</Lounge_Access>
+    </Lounge_Information>
+</airline_reservation_metadata>

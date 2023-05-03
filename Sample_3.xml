@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<airline_reservation_metadata xmlns="http://575airlineReservations.org/v1/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://575airlineReservations.org/v1/ file:/Users/sreenithibalasubramanian/Downloads/united_airlines_reservation.xsd">
+    <Passenger_Name>Ben Ackley</Passenger_Name>
+    <Reservation_ID>I8D3GF</Reservation_ID>
+    <Flight_Number>F9 1025</Flight_Number>
+    <Departure_Information>
+        <Departure_Airport_Name>Chicago Midway Airport</Departure_Airport_Name>
+        <Departure_Airport_Code>MDW</Departure_Airport_Code>
+        <Departure_DateTime>2022-12-13T20:50:00</Departure_DateTime>
+    </Departure_Information>
+    <Arrival_Information>
+        <Arrival_Airport_Name>Orlando Int'l Airport</Arrival_Airport_Name>
+        <Arrival_Airport_Code>ORL</Arrival_Airport_Code>
+        <Arrival_DateTime>2022-12-13T23:26:00</Arrival_DateTime>
+    </Arrival_Information>
+    <Flight_Duration>2.6</Flight_Duration>
+    <Trip_Type Chosen_Trip_Type="Round Trip"/>
+    <Booked_Class Chosen_Class="Economy"/>
+    <Trip_Information>
+        <Number_of_Checked_Bags>1</Number_of_Checked_Bags>
+        <Trip_Cost>138</Trip_Cost>
+        <Trip_Currency Currency="USD"/>
+    </Trip_Information>
+    <Delays>
+        <Flight_Delay>false</Flight_Delay>
+    </Delays>
+    <Cancelations>
+        <Flight_Cancelation>false</Flight_Cancelation>
+    </Cancelations>
+    <Lounge_Information>
+        <Lounge_Access>false</Lounge_Access>
+    </Lounge_Information>
+</airline_reservation_metadata>
